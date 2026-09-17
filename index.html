@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EnviroSense | Smart Indoor Environmental Monitoring</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="light">
+<div class="container">
+<header class="hero">
+<h1>🌿 EnviroSense</h1>
+<p>AI Powered Indoor Environmental Monitoring System</p>
+<button id="themeToggle" class="toggle-btn">🌙 Dark Mode</button>
+</header>
+
+<div id="overallStatus" class="status-badge">Environment Status : --</div>
+
+<section class="cards">
+<div class="card"><h3>🌡 Temperature</h3><p id="temperature">-- °C</p><span id="tempTrend"></span></div>
+<div class="card"><h3>💧 Humidity</h3><p id="humidity">-- %</p><span id="humidityTrend"></span></div>
+<div class="card"><h3>🌫 Air Quality</h3><p id="air">--</p><span id="airTrend"></span></div>
+<div class="card"><h3>☀ Light</h3><p id="light">-- lx</p><span id="lightTrend"></span></div>
+<div class="card highlight"><h3>❤️ Indoor Health Index</h3><p id="ihi"></p></div>
+<div class="card"><h3>🎯 Confidence</h3><p id="confidence"></p></div>
+<div class="card"><h3>📈 AQ Prediction</h3><p id="prediction"></p></div>
+<div class="card"><h3>📊 Trend</h3><p id="trend"></p></div>
+<div class="card">
+    <h3>🫧 Estimated CO₂ </h3>
+
+    <h2 id="co2Demo">0.20 %</h2>
+
+    <small class="demo-text">Illustration Only</small>
+</div>
+</section>
+
+<section class="two-column">
+<div class="panel">
+<h2>🧠 AI Insights</h2>
+<p id="aiInsight">Waiting for sensor data...</p>
+<h3>Root Cause</h3>
+<p id="rootCause">--</p>
+</div>
+<div class="panel">
+<h2>💡 Smart Recommendations</h2>
+<ul id="recommendations"><li>Waiting for sensor data...</li></ul>
+</div>
+</section>
+
+<section class="system-grid">
+<div class="mini-card"><h3>📡 WiFi</h3><p id="wifiStatus">Connected</p></div>
+<div class="mini-card"><h3>☁ ThingSpeak</h3><p id="cloudStatus">Connected</p></div>
+<div class="mini-card"><h3>🔬 Sensors</h3><p id="sensorStatus">Healthy</p></div>
+<div class="mini-card"><h3>🕒 Last Updated</h3><p id="lastUpdated">--</p></div>
+</section>
+
+<section class="chart-panel">
+<h2>📈 Environmental Trends</h2>
+<canvas id="sensorChart"></canvas>
+</section>
+
+<section class="info-section">
+<h2>Healthy Indoor Ranges</h2>
+<div class="info-grid">
+<div class="info-card"><h3>Temperature</h3><p>20–26°C</p></div>
+<div class="info-card"><h3>Humidity</h3><p>40–60%</p></div>
+<div class="info-card"><h3>Air Quality</h3><p>Below 1500</p></div>
+<div class="info-card"><h3>Lighting</h3><p>1500–3000 lux</p></div>
+<div class="info-card"><h3>IHI</h3><p>80–100 Excellent</p></div>
+</div>
+</section>
+
+<footer><p>EnviroSense | ESP32 • ThingSpeak • IoT Dashboard</p></footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
